@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  # -----app-----
+  # Starts the PostgreSQL DataBase
+  db:
+    image: postgres:12
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=app
+    ports:
+      - "5432:5432"
+
+  # Starts the app
+  app:
+    build: app/
+    restart: always
+    # command: bash -c "python3 app.py"
+    volumes:
+      - ./app:/code
+    depends_on:
+      - db
+    environment:
+      - api_prefix=/api/v1/app
+      - database_url=postgres://postgres:postgres@db/app
+      - port=8000
+      - secret_key=SuperSecretKey # this can be replace using a .env
