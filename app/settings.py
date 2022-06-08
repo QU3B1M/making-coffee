@@ -1,5 +1,5 @@
 import os
-
+# Third-party imports
 from pydantic import BaseSettings
 
 
@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     """App Settings"""
 
     database_url: str = "sqlite://:memory:"  # Default is a sqlite in memory
-    database_models: list = ["api.database.schemas"]
+    database_models: list = ["schemas"]
     app_mode: str = "Development"
     app_name: str = "making-coffee"
     api_prefix: str = "/api/v1/cofee"

@@ -27,3 +27,5 @@ services:
       - database_url=postgres://postgres:postgres@db/app
       - port=8000
       - secret_key=SuperSecretKey # this can be replace using a .env
+    ports:
+      - "8000:8000"

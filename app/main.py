@@ -1,3 +1,4 @@
+# Third-party imports
 from fastapi import FastAPI
 # making-coffee imports
 from db import init_database
