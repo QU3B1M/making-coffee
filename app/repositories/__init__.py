@@ -1,1 +1,1 @@
-from .base import BaseRepository
+from coffee_maker import CoffeeMakerRepository

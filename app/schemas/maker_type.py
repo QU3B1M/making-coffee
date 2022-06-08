@@ -22,7 +22,7 @@ class Brewing(str, Enum):
     BOILING = "boiling"
 
 
-class CoffeeMakerType(Model):
+class MakerType(Model):
     """Coffee Maker Types DataBase Model."""
 
     id: int = fields.IntField(pk=True)
