@@ -29,5 +29,6 @@ class CoffeeMakerType(Model):
     name: str = fields.CharField(max_length=255)
     description: str = fields.TextField()
     category: Category = fields.CharEnumField(Category)
+    brewing: Brewing = fields.CharEnumField(Brewing)
     created_at: datetime = fields.DatetimeField(auto_now_add=True)
     updated_at: datetime = fields.DatetimeField(auto_now=True)
