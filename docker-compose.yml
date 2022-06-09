@@ -1,7 +1,6 @@
 version: "3.7"
 
 services:
-  # -----app-----
   # Starts the PostgreSQL DataBase
   db:
     image: postgres:12
@@ -29,3 +28,14 @@ services:
       - secret_key=SuperSecretKey # this can be replace using a .env
     ports:
       - "8000:8000"
+
+  # -----PGAdmin-----
+  pgadmin:
+    image: dpage/pgadmin4
+    depends_on:
+      - db
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=makingcoffee@coffe.com
+      - PGADMIN_DEFAULT_PASSWORD=coffee
+    ports:
+      - "5050:5050"
