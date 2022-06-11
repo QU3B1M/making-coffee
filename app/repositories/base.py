@@ -1,6 +1,5 @@
 from typing import Generic, List, TypeVar
 
-# Third-party imports.
 from pydantic import BaseModel
 from tortoise.models import Model
 

@@ -1,10 +1,8 @@
 from datetime import datetime
 
-# Third-party imports
 from tortoise import fields
 from tortoise.models import Model
 
-# Making-coffee imports
 from .coffee_maker import CoffeeMaker
 
 

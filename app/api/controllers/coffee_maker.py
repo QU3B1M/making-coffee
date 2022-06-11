@@ -1,9 +1,7 @@
 from typing import List
 
-# Third-party imports
 from fastapi import APIRouter
 
-# Making-coffee imports
 from repositories import CoffeeMakerRepository
 from models import CoffeeMakerModel, CoffeeMakerIn
 

@@ -1,7 +1,6 @@
 from datetime import datetime
 from enum import Enum
 
-# Third-party imports
 from tortoise import fields
 from tortoise.models import Model
 
