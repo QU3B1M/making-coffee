@@ -1,18 +1,28 @@
 from datetime import datetime
+from enum import Enum
 
 # Third-party imports
 from tortoise import fields
 from tortoise.models import Model
-# Making-coffee imports
-from .maker_type import MakerType
+
+
+class BrewingMethods(str, Enum):
+    """Coffee Maker Possible Brewings."""
+
+    PRESSURE = "pressure"
+    STEEPING = "steeping"
+    DRIPPING = "dripping"
+    BOILING = "boiling"
 
 
 class CoffeeMaker(Model):
-    """CoffeeMaker DataBase Model."""
+    """Coffee Maker DataBase Model."""
 
-    id: int = fields.BigIntField(pk=True)
+    id: int = fields.IntField(pk=True)
     name: str = fields.CharField(max_length=255)
     description: str = fields.TextField()
-    type: MakerType = fields.ForeignKeyField("models.MakerType", related_name="makers")
+    method: BrewingMethods = fields.CharEnumField(BrewingMethods)
+    ratio: str = fields.CharField(max_length=255)
+    grind: str = fields.CharField(max_length=255)
     created_at: datetime = fields.DatetimeField(auto_now_add=True)
     updated_at: datetime = fields.DatetimeField(auto_now=True)

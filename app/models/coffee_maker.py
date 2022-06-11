@@ -1,6 +1,6 @@
 from tortoise.contrib.pydantic import pydantic_model_creator
 
-# CoffeeMaker imports
+# Making-cofee imports
 from schemas import CoffeeMaker
 
 

@@ -1,8 +1,8 @@
 from .base import BaseRepository
-from schemas import CoffeeMaker
-from models import CoffeeMakerModel
+from schemas import CoffeeBrew
+from models import CoffeeBrewModel
 
 
-class CoffeeMakerRepository(BaseRepository):
-    schema = CoffeeMaker
-    model = CoffeeMakerModel
+class CoffeeBrewRepository(BaseRepository):
+    schema = CoffeeBrew
+    model = CoffeeBrewModel
