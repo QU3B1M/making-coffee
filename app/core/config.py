@@ -1,4 +1,5 @@
 import os
+
 # Third-party imports
 from pydantic import BaseSettings
 
@@ -18,3 +19,6 @@ class Settings(BaseSettings):
     class Config:
         case_sensitive: bool = True
         env_file = os.path.expanduser(".env")
+
+
+settings = Settings()

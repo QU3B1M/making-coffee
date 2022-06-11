@@ -1,11 +1,9 @@
 from fastapi import FastAPI
 from tortoise import Tortoise
 from tortoise.contrib.fastapi import register_tortoise
+
 # Making-coffee imports
-from core.settings import Settings
-
-
-settings = Settings()
+from core.config import settings
 
 
 def init_database(app: FastAPI):
