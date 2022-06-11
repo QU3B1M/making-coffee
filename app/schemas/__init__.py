@@ -1,2 +1,2 @@
 from .coffee_brew import CoffeeBrew
-from .maker_type import CoffeeMaker
+from .coffee_maker import CoffeeMaker
