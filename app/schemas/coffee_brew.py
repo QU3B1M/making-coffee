@@ -1,9 +1,9 @@
 from datetime import datetime
-from unittest import result
 
 # Third-party imports
 from tortoise import fields
 from tortoise.models import Model
+
 # Making-coffee imports
 from .coffee_maker import CoffeeMaker
 
@@ -14,7 +14,9 @@ class CoffeeBrew(Model):
     id: int = fields.BigIntField(pk=True)
     name: str = fields.CharField(max_length=255)
     description: str = fields.TextField()
-    maker: CoffeeMaker = fields.ForeignKeyField("models.CoffeeMaker", related_name="brews")
+    maker: CoffeeMaker = fields.ForeignKeyField(
+        "models.CoffeeMaker", related_name="brews"
+    )
     time: int = fields.IntField()
     roast: str = fields.CharField(max_length=255)
     coffee_grams: int = fields.IntField()
