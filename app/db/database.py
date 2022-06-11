@@ -9,13 +9,13 @@ def init_database(app: FastAPI):
     """Initializes the database connection"""
     register_tortoise(
         app,
-        db_url=settings.database_url,
+        db_url=settings.DATABASE_URL,
         modules={
-            "models": settings.database_models,
+            "models": settings.DATABASE_MODELS,
         },
         generate_schemas=True,
         add_exception_handlers=True,
     )
 
 
-Tortoise.init_models(models_paths=settings.database_models, app_label="models")
+Tortoise.init_models(models_paths=settings.DATABASE_MODELS, app_label="models")

@@ -22,10 +22,10 @@ services:
     depends_on:
       - db
     environment:
-      - api_prefix=/api/v1/app
-      - database_url=postgres://postgres:postgres@db/app
-      - port=8000
-      - secret_key=SuperSecretKey # this can be replace using a .env
+      - API_PREFIX=/api/v1/app
+      - DATABASE_URL=postgres://postgres:postgres@db/app
+      - PORT=8000
+      - SECRET_KEY=SuperSecretKey # this can be replace using a .env
     ports:
       - "8000:8000"
 

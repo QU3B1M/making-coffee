@@ -6,17 +6,17 @@ from pydantic import AnyHttpUrl, BaseSettings
 class Settings(BaseSettings):
     """App Settings"""
 
-    api_prefix: str = "/api/v1/cofee"
-    app_mode: str = "Development"
-    app_name: str = "making-coffee"
-    cors_origins: List[AnyHttpUrl] = []
-    database_url: str = "sqlite://:memory:"  # Default is a sqlite in memory
-    database_models: list = ["schemas"]
-    port: int = 8000
-    secret_key: str = "SuperSecretKey"
+    API_PREFIX: str = "/api/v1/cofee"
+    APP_MODE: str = "Development"
+    APP_NAME: str = "making-coffee"
+    CORS_ORIGINS: List[AnyHttpUrl] = []
+    DATABASE_URL: str = "sqlite://:memory:"  # Default is a sqlite in memory
+    DATABASE_MODELS: list = ["schemas"]
+    PORT: int = 8000
+    SECRET_KEY: str = "SuperSecretKey"
 
     class Config:
-        case_sensitive: bool = False
+        case_sensitive: bool = True
 
 
 settings = Settings()
