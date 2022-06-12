@@ -3,7 +3,7 @@ import logging
 from tenacity import after_log, before_log, retry, stop_after_attempt, wait_fixed
 from tortoise.contrib.test import finalizer, initializer
 
-from core.config import settings
+from app.core.config import settings
 
 
 logging.basicConfig(level=logging.INFO)

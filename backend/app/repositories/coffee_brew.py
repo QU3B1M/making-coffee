@@ -1,6 +1,6 @@
 from .base import BaseRepository
-from models import CoffeeBrewModel
-from schemas import CoffeeBrew
+from app.models import CoffeeBrewModel
+from app.schemas import CoffeeBrew
 
 
 class CoffeeBrewRepository(BaseRepository):

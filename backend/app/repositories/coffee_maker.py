@@ -1,6 +1,6 @@
 from .base import BaseRepository
-from models import CoffeeMakerModel
-from schemas import CoffeeMaker, BrewingMethods
+from app.models import CoffeeMakerModel
+from app.schemas import CoffeeMaker, BrewingMethods
 
 
 class CoffeeMakerRepository(BaseRepository):

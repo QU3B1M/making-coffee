@@ -2,9 +2,9 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from starlette.middleware.cors import CORSMiddleware
 
-from db import init_database
-from api import router
-from core.config import settings
+from app.db import init_database
+from app.api import router
+from app.core.config import settings
 
 
 app = FastAPI()
@@ -21,5 +21,5 @@ if settings.CORS_ORIGINS:
         allow_headers=["*"],
     )
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
 app.include_router(router)

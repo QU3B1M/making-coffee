@@ -3,8 +3,8 @@ import logging
 
 from tortoise import Tortoise, run_async
 
-from core.config import settings
-from schemas import CoffeeMaker
+from app.core.config import settings
+from app.schemas import CoffeeMaker
 
 
 logging.basicConfig(level=logging.INFO)

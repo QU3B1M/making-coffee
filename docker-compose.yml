@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  # Starts the PostgreSQL DataBase
+  # PostgreSQL DataBase
   db:
     image: postgres:12
     restart: always
@@ -12,24 +12,24 @@ services:
     ports:
       - "5432:5432"
 
-  # Starts the app
+  # Backend app
   app:
-    build: app/
+    build: backend/
     restart: always
     # command: bash -c "python3 app.py"
     volumes:
-      - ./app:/code
+      - ./backend:/code
     depends_on:
       - db
     environment:
-      - API_PREFIX=/api/v1/app
+      - API_PREFIX=/api/v1
       - DATABASE_URL=postgres://postgres:postgres@db/app
       - PORT=8000
       - SECRET_KEY=SuperSecretKey # this can be replace using a .env
     ports:
       - "8000:8000"
 
-  # -----PGAdmin-----
+  # PGAdmin
   pgadmin:
     image: dpage/pgadmin4
     depends_on:

@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from tortoise import Tortoise
 from tortoise.contrib.fastapi import register_tortoise
 
-from core.config import settings
+from app.core.config import settings
 
 
 def init_database(app: FastAPI):

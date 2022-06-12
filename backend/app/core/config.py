@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     APP_NAME: str = "making-coffee"
     CORS_ORIGINS: List[AnyHttpUrl] = []
     DATABASE_URL: str = "sqlite://:memory:"  # Default is a sqlite in memory
-    DATABASE_MODELS: list = ["schemas"]
+    DATABASE_MODELS: list = ["app.schemas"]
     PORT: int = 8000
     SECRET_KEY: str = "SuperSecretKey"
 

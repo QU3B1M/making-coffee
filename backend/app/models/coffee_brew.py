@@ -1,6 +1,6 @@
 from tortoise.contrib.pydantic import pydantic_model_creator
 
-from schemas import CoffeeBrew
+from app.schemas import CoffeeBrew
 
 
 CoffeeBrewModel = pydantic_model_creator(CoffeeBrew, name="CoffeeBrewModel")

@@ -2,8 +2,8 @@ from typing import List
 
 from fastapi import APIRouter
 
-from repositories import CoffeeMakerRepository
-from models import CoffeeMakerModel, CoffeeMakerIn
+from app.repositories import CoffeeMakerRepository
+from app.models import CoffeeMakerModel, CoffeeMakerIn
 
 
 router = APIRouter(prefix="/coffee_maker")
