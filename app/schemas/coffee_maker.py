@@ -13,6 +13,10 @@ class BrewingMethods(str, Enum):
     DRIPPING = "dripping"
     BOILING = "boiling"
 
+    @classmethod
+    def list(cls):
+        return list(map(lambda c: c.value, BrewingMethods))
+
 
 class CoffeeMaker(Model):
     """Coffee Maker DataBase Model."""

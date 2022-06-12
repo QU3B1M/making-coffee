@@ -1,7 +1,15 @@
+from pydantic import BaseModel
 from tortoise.contrib.pydantic import pydantic_model_creator
 
-from schemas import CoffeeMaker
+from schemas import CoffeeMaker, BrewingMethods
 
 
 CoffeeMakerModel = pydantic_model_creator(CoffeeMaker, name="CoffeeMakerModel")
-CoffeeMakerIn = pydantic_model_creator(CoffeeMaker, name="CoffeeMakerIn", exclude=["id", "brews", "created_at", "updated_at"])
+
+
+class CoffeeMakerIn(BaseModel):
+    name: str
+    description: str
+    method: BrewingMethods
+    ratio: str
+    grind: str

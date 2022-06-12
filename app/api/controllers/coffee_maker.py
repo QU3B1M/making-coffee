@@ -13,6 +13,10 @@ router = APIRouter(prefix="/coffee_maker")
 async def get_makers():
     return await CoffeeMakerRepository.get_all()
 
+@router.get("/brewing_methods", response_model=List[str])
+async def get_brewing_methods():
+    return await CoffeeMakerRepository.get_brewing_methods()
+
 
 @router.get("/{id}", response_model=CoffeeMakerModel)
 async def get_maker(id: int):
