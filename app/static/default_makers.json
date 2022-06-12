@@ -4,6 +4,7 @@
 		"description": "Drip coffee makers are an easy, familiar way to make coffee. They can brew a single cup of coffee or up to 14. Some drip coffee makers feature an additional brewing system such as a hot water dispenser or a single-serve brewer that is compatible with K-cups for more versatility.",
 		"method": "dripping",
 		"ratio": "1:16",
+		"img_path": "static/img/coffee_makers/auto_drip_machine.jpg",
 		"grind": "medium"
 	},
 	{
@@ -11,6 +12,7 @@
 		"description": "Brewing coffee using a pour over is one of the more gentle brewing methods. Pour-overs can be used over a single mug or larger carafe to make a full-bodied cup of coffee.",
 		"method": "dripping",
 		"ratio": "16:1",
+		"img_path": "static/img/coffee_makers/pour_over.jpg",
 		"grind": "medium-coarse"
 	},
 	{
@@ -18,6 +20,7 @@
 		"description": "A French Press works by gently steeping coffee grounds in just-boiled water to make a full-bodied cup of coffee. The longer you steep the coffee, the stronger the flavor, although four minutes is the recommended amount of time.",
 		"method": "steeping",
 		"ratio": "1:12",
+		"img_path": "static/img/coffee_makers/french_press.jpg",
 		"grind": "coarse"
 	},
 	{
@@ -25,34 +28,39 @@
 		"description": "Chemex is a pour-over method, which means that the water passes through a bed of coffee and a filter, normally made out of paper. In contrast to say a French press, the Chemex will give you a remarkably clean cup of coffee.",
 		"method": "dripping",
 		"ratio": "1:15",
+		"img_path": "static/img/coffee_makers/chemex.jpg",
 		"grind": "medium-coarse"
 	},
-    {
-        "name": "AeroPress",
-        "description": "This coffee maker has more than 5,000 positive reviews on Amazon. People love that it's quick and easy to clean, especially in comparison to French presses, which work similarly. In addition to making espresso and Americanos, the AeroPress can also make cold brew coffee by allowing the grounds to steep for one minute instead of 10 seconds.",
-        "method": "pressure",
-        "ratio": "1:10",
-        "grind": "medium-fine"
-      },
-      {
-        "name": "Espresso Machine",
-        "description": "Like coffee, there are a lot of ways to make espresso, which is a type of coffee drink that uses dark roasted beans and a fine grind. It’s a lot more concentrated than drip coffee and served in a smaller cup.",
-        "method": "pressure",
-        "ratio": "1:2",
-        "grind": "fine"
-      },
-      {
-        "name": "Ibrik (Turkish Coffee Maker)",
-        "description": "Turkish/Greek coffee is made on the stove using a very small pot. This method produces very strong, unfiltered coffee. Some people like to add sugar or other seasonings like cinnamon or cardamom right to the pot while brewing, which infuses the flavor. Like espresso, it's enjoyed from a small cup.",
-        "method": "boiling",
-        "ratio": "1:9",
-        "grind": "superfine"
-      },
-      {
-        "name": "Moka Pot",
-        "description": "A Moka pot is a popular coffee maker that produces a dark brew that's comparable to espresso, but, according to the Italian Espresso National Institute, doesn’t qualify as espresso because it doesn’t use the required nine bars of pressure. It still produces a very dark cup of coffee, however, and can be used as a solid base for cappuccinos and lattes.",
-        "method": "pressure",
-        "ratio": "1:12",
-        "grind": "medium-fine"
-      }
+	{
+		"name": "AeroPress",
+		"description": "This coffee maker has more than 5,000 positive reviews on Amazon. People love that it's quick and easy to clean, especially in comparison to French presses, which work similarly. In addition to making espresso and Americanos, the AeroPress can also make cold brew coffee by allowing the grounds to steep for one minute instead of 10 seconds.",
+		"method": "pressure",
+		"ratio": "1:10",
+		"img_path": "static/img/coffee_makers/aeropress.jpg",
+		"grind": "medium-fine"
+	},
+	{
+		"name": "Espresso Machine",
+		"description": "Like coffee, there are a lot of ways to make espresso, which is a type of coffee drink that uses dark roasted beans and a fine grind. It’s a lot more concentrated than drip coffee and served in a smaller cup.",
+		"method": "pressure",
+		"ratio": "1:2",
+		"img_path": "static/img/coffee_makers/espresso_machine.jpg",
+		"grind": "fine"
+	},
+	{
+		"name": "Ibrik (Turkish Coffee Maker)",
+		"description": "Turkish/Greek coffee is made on the stove using a very small pot. This method produces very strong, unfiltered coffee. Some people like to add sugar or other seasonings like cinnamon or cardamom right to the pot while brewing, which infuses the flavor. Like espresso, it's enjoyed from a small cup.",
+		"method": "boiling",
+		"ratio": "1:9",
+		"img_path": "static/img/coffee_makers/ibrik.jpg",
+		"grind": "superfine"
+	},
+	{
+		"name": "Moka Pot",
+		"description": "A Moka pot is a popular coffee maker that produces a dark brew that's comparable to espresso, but, according to the Italian Espresso National Institute, doesn’t qualify as espresso because it doesn’t use the required nine bars of pressure. It still produces a very dark cup of coffee, however, and can be used as a solid base for cappuccinos and lattes.",
+		"method": "pressure",
+		"ratio": "1:12",
+		"img_path": "static/img/coffee_makers/moka_pot.jpg",
+		"grind": "medium-fine"
+	}
 ]

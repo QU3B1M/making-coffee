@@ -27,5 +27,6 @@ class CoffeeMaker(Model):
     method: BrewingMethods = fields.CharEnumField(BrewingMethods)
     ratio: str = fields.CharField(max_length=255)
     grind: str = fields.CharField(max_length=255)
+    img_path: str = fields.CharField(max_length=255)
     created_at: datetime = fields.DatetimeField(auto_now_add=True)
     updated_at: datetime = fields.DatetimeField(auto_now=True)
