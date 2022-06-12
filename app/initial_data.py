@@ -3,8 +3,8 @@ import logging
 
 from tortoise import Tortoise, run_async
 
-from app.core.config import settings
-from app.schemas import CoffeeMaker
+from core.config import settings
+from schemas import CoffeeMaker
 
 
 logging.basicConfig(level=logging.INFO)
@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 async def load_default_coffee_makers() -> list[CoffeeMaker]:
     """Load initial data (default coffee makers) from a json file."""
-    with open("app/static/default_makers.json", "r") as file:
+    with open("static/default_makers.json", "r") as file:
         return json.load(file)
 
 

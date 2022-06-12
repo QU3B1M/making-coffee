@@ -3,7 +3,7 @@ import logging
 from tenacity import after_log, before_log, retry, stop_after_attempt, wait_fixed
 from tortoise.contrib.test import finalizer, initializer
 
-from app.core.config import settings
+from core.config import settings
 
 
 logging.basicConfig(level=logging.INFO)
@@ -21,7 +21,7 @@ wait_seconds = 1
 )
 def init() -> None:
     try:
-        initializer(["models"], db_url=settings.DATABASE_URL)
+        initializer(settings.DATABASE_MODELS, db_url=settings.DATABASE_URL)
     except Exception as e:
         logger.error(e)
         raise e
