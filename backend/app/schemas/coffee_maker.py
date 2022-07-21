@@ -6,12 +6,12 @@ from tortoise.models import Model
 
 
 class BrewingMethods(str, Enum):
-    """Coffee Maker Possible Brewings."""
+    '''Coffee Maker Possible Brewings.'''
 
-    PRESSURE = "pressure"
-    STEEPING = "steeping"
-    DRIPPING = "dripping"
-    BOILING = "boiling"
+    PRESSURE = 'pressure'
+    STEEPING = 'steeping'
+    DRIPPING = 'dripping'
+    BOILING = 'boiling'
 
     @classmethod
     def list(cls):
@@ -19,7 +19,7 @@ class BrewingMethods(str, Enum):
 
 
 class CoffeeMaker(Model):
-    """Coffee Maker DataBase Model."""
+    '''Coffee Maker DataBase Model.'''
 
     id: int = fields.IntField(pk=True)
     name: str = fields.CharField(max_length=255)

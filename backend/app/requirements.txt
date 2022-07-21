@@ -30,9 +30,10 @@ requests==2.27.1
 six==1.16.0
 sniffio==1.2.0
 starlette==0.19.1
+tenacity==8.0.1
 tomli==2.0.1
 tortoise-orm==0.19.1
-typing_extensions==4.2.0
+typing-extensions==4.2.0
 ujson==5.3.0
 urllib3==1.26.9
 uvicorn==0.17.6

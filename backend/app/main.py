@@ -17,9 +17,9 @@ if settings.CORS_ORIGINS:
         CORSMiddleware,
         allow_origins=[str(origin) for origin in settings.CORS_ORIGINS],
         allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
+        allow_methods=['*'],
+        allow_headers=['*'],
     )
 
-app.mount("/static", StaticFiles(directory="app/static"), name="static")
+app.mount('/static', StaticFiles(directory='app/static'), name='static')
 app.include_router(router)

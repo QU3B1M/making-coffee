@@ -7,13 +7,13 @@ from .coffee_maker import CoffeeMaker
 
 
 class CoffeeBrew(Model):
-    """CoffeeBrew DataBase Model."""
+    '''CoffeeBrew DataBase Model.'''
 
     id: int = fields.BigIntField(pk=True)
     name: str = fields.CharField(max_length=255)
     description: str = fields.TextField()
     maker: CoffeeMaker = fields.ForeignKeyField(
-        "models.CoffeeMaker", related_name="brews"
+        'models.CoffeeMaker', related_name='brews'
     )
     time: int = fields.IntField()
     roast: str = fields.CharField(max_length=255)

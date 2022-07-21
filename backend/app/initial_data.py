@@ -1,5 +1,6 @@
 import json
 import logging
+from typing import List
 
 from tortoise import Tortoise, run_async
 
@@ -11,16 +12,16 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-async def load_default_coffee_makers() -> list[CoffeeMaker]:
-    """Load initial data (default coffee makers) from a json file."""
-    with open("static/default_makers.json", "r") as file:
+async def load_default_coffee_makers() -> List[CoffeeMaker]:
+    '''Load initial data (default coffee makers) from a json file.'''
+    with open('static/default_makers.json', 'r') as file:
         return json.load(file)
 
 
 async def init() -> None:
     await Tortoise.init(
         db_url=settings.DATABASE_URL,
-        modules={"models": settings.DATABASE_MODELS},
+        modules={'models': settings.DATABASE_MODELS},
     )
     await Tortoise.generate_schemas()
     # Load and register defaults coffee makers.
@@ -29,10 +30,10 @@ async def init() -> None:
 
 
 def main() -> None:
-    logger.info("Creating initial data")
+    logger.info('Creating initial data')
     run_async(init())
-    logger.info("Initial data created")
+    logger.info('Initial data created')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

@@ -4,7 +4,7 @@ from tortoise.contrib.pydantic import pydantic_model_creator
 from app.schemas import CoffeeMaker, BrewingMethods
 
 
-CoffeeMakerModel = pydantic_model_creator(CoffeeMaker, name="CoffeeMakerModel")
+CoffeeMakerModel = pydantic_model_creator(CoffeeMaker, name='CoffeeMakerModel')
 
 
 class CoffeeMakerIn(BaseModel):
