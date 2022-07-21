@@ -1,7 +1,5 @@
-# Third-party imports
 from fastapi import APIRouter
-
-# Making-cofee imports
+ 
 from . import coffee_brew, coffee_maker
 
 
